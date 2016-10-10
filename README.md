@@ -1,2 +1,9 @@
-# Prog7_files
-Files needed for Program 7
+# Program 7
+Name:  
+Cosc 5730 or 4730
+
+Description:  (how to run the program, phone/emulator screen size, android version ie 7.0)
+
+Anything that doesn't work:
+
+
