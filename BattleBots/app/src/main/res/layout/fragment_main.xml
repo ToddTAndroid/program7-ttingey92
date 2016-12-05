@@ -1,0 +1,256 @@
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.uwyo.toddt.battlebots.MainFragment"
+    android:id="@+id/vSwitcher">
+
+    <!-- Text edit view -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hostname: "
+                android:textSize="10pt"/>
+
+            <EditText
+                android:id="@+id/edit_hostname"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="10pt"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Port: "
+                android:textSize="10pt"/>
+
+            <EditText
+                android:id="@+id/edit_port"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="10pt"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bot Name: "
+                android:textSize="10pt"/>
+
+            <EditText
+                android:id="@+id/edit_botname"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="10pt"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bullet Value: "
+                android:textSize="10pt"/>
+
+            <EditText
+                android:id="@+id/edit_bulletVal"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="10pt"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Armour Value: "
+                android:textSize="10pt"/>
+
+            <EditText
+                android:id="@+id/edit_armourVal"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="10pt"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan Value: "
+                android:textSize="10pt"/>
+
+            <EditText
+                android:id="@+id/edit_scanVal"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="10pt"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_mkconn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text=" Make Connection "/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:id="@+id/view_output"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <TextView
+                android:id="@+id/view_output2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_mv_NW"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@mipmap/simple_dot"/>
+            <Button
+                android:id="@+id/btn_mv_N"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@mipmap/arrow_up"/>
+            <Button
+                android:id="@+id/btn_mv_NE"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@mipmap/simple_dot"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_mv_W"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@mipmap/arrow_left"/>
+            <Button
+                android:id="@+id/btn_fire"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@mipmap/img_fire"/>
+            <Button
+                android:id="@+id/btn_mv_E"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@mipmap/arrow_right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_mv_SW"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@mipmap/simple_dot"/>
+            <Button
+                android:id="@+id/btn_mv_S"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@mipmap/arrow_down"/>
+            <Button
+                android:id="@+id/btn_mv_SE"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@mipmap/simple_dot"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_idle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Idle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_scan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Scan"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_fire_p"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fire at Powerup"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ViewSwitcher>
